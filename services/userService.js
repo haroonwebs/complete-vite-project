@@ -18,7 +18,7 @@ module.exports = {
       // delete user.response.dataValues.password; //applied this using hooks in the user table definitions
       return { response: user.response.dataValues };
     } catch (error) {
-      return { message: error.message };
+      return { message: error };
     }
   },
   getAllUser: async (query, userId, role) => {

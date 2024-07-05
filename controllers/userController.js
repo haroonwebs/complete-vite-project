@@ -30,7 +30,7 @@ module.exports = {
       const user = await userService.createUser(validate);
       if (user.error) {
         return res.send({
-          error: "user already exists",
+          error: user.error,
         });
       }
       return res.send({
@@ -38,7 +38,7 @@ module.exports = {
       });
     } catch (error) {
       return res.send({
-        message: error.message,
+        message: error,
       });
     }
   },

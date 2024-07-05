@@ -13,7 +13,7 @@ var sessionRoutes = require("./routes/sessionRouter");
 var app = express();
 
 // view engine setup
-//app.set("view engine", "jade");
+app.set("view engine", "jade");
 
 app.use(logger("dev"));
 app.use(express.json());

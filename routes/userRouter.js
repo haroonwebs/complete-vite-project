@@ -8,7 +8,7 @@ const {
 const { middleware, admin } = require("../middleware");
 
 route.get("/getAllUsers", middleware, getAllUsers);
-route.post("/createUser", admin, createUser);
+route.post("/createUser", createUser);
 route.delete("/deleteUser", admin, deleteUser);
 route.put("/updateUser", middleware, updateUser);
 
